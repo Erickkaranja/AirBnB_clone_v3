@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''review module.'''
+'''review module which implements http request for amenities.'''
 
 from api.v1.views import app_views
 from flask import jsonify, abort

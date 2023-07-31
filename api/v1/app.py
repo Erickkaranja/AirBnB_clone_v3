@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''implements the restFul API blue prints with required error handlers.'''
 
 from model import storage
 from os import getenv
