@@ -2,7 +2,7 @@
 '''implements http requests for class city includes POST, GET, PUT AND DELETE
    request.
  '''
-from models import storage, classes
+from models import storage
 from api.v1.views import app_views
 from flask import request, jsonify, abort
 
@@ -37,7 +37,7 @@ def states_cities(state_id=None):
 def cities_with_id(city_id=None):
     '''cities route to handle http methods for given cities'''
     cities_obj = storage.get('City', city_id)
-    is cities_obj is None:
+    if cities_obj is None:
         abort(404, 'Not found')
 
     if request.method == 'GET':

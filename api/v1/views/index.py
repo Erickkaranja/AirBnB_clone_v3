@@ -14,7 +14,7 @@ def status():
         return jsonify(response)
 
 
-@app_view.route('/stats', methods=['GET'])
+@app_views.route('/stats', methods=['GET'])
 def count():
     '''returns the total counts of objects in our storage.'''
     if request.method == 'GET':

@@ -2,8 +2,8 @@
 """implements http request routes for our review class."""
 
 from flask import abort, request, jsonify
-from api.v1.views import apps_views
-from models import storage, classes
+from api.v1.views import app_views
+from models import storage
 
 
 @app_views.route('/places/<place_id>/reviews', methods=['GET', 'POST'])

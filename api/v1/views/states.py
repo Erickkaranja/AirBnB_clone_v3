@@ -3,7 +3,7 @@
 Flask route that returns json status response for our state object.
 '''
 
-from models import storage, classes
+from models import storage
 from api.v1.views import app_views
 from flask import abort, jsonify, make_response, request
 

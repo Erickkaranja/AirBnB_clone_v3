@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 '''implements the restFul API blue prints with required error handlers.'''
 
-from model import storage
+from models import storage
 import os
 from flask import Flask
 from flask import make_response
-from api.v1.views import api_views
+from api.v1.views import app_views
 
 app = Flask(__name__)
 '''flask web application instance.'''

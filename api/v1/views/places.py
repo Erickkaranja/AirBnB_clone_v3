@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''implements http requests for place object'''
 from flask import abort, jsonify, request
-from api.v1.views import api_views
+from api.v1.views import app_views
 from models import storage
 
 
