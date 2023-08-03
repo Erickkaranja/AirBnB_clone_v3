@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""implements http request routes for our review class."""
 
 from flask import abort, request, jsonify
 from api.v1.views import apps_views

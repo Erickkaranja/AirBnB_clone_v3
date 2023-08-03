@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""contains the route to the status of our api."""
 from api.v1.views import app_views
 from flask import request
 from flask import jsonify

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+'''implements http requests for class city includes POST, GET, PUT AND DELETE
+   request.
+ '''
 from models import storage, classes
 from api.v1.views import app_views
 from flask import request, jsonify, abort

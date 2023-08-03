@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Flask route that returns json status response.
+Flask route that returns json status response for our state object.
 '''
 
 from models import storage, classes
