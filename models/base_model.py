@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!usr/bin/python3
 """This module defines a base class for all models in our hbnb clone"""
 import uuid
 from datetime import datetime
@@ -18,7 +18,8 @@ class BaseModel:
            updated_at(sqlalchemy DateTime): represents update time of a model.
     """
 
-    id = Column(String(60), nullable=False, primary_key=True)
+    id = Column(String(60), nullable=False, primary_key=True,
+                default=str(uuid.uuid4()))
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
     updated_at = Column(DateTime, nullable=False, default=datetime.utcnow())
 

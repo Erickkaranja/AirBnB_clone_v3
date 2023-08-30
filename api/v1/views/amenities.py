@@ -2,7 +2,7 @@
 '''review module which implements http request for amenities.'''
 
 from api.v1.views import app_views
-from flask import jsonify, abort, make_response
+from flask import jsonify, abort, make_response, request
 from models import storage
 from models.amenity import Amenity
 
@@ -10,7 +10,7 @@ from models.amenity import Amenity
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
 def get_amenities():
     '''http method that handles a get request on amenities.'''
-    all_amenities = storage.all(Amenities)
+    all_amenities = storage.all(Amenity)
     return jsonify(amenities.to_dict() for amenity in all_amenities.values())
 
 
@@ -20,9 +20,9 @@ def post_amenities():
     req_json = request.get_json()
     if req_json is None:
         abort(400, 'Not a JSON')
-    if name not in req_json:
+    if 'name' not in req_json:
         abort(400, 'Missing name')
-    obj_amenities = Amenities(**req_json)
+    obj_amenities = Amenity(**req_json)
     storage.new(obj_amenities)
     storage.save()
     return make_response(jsonify(obj_amenities.to_dict()), 201)
