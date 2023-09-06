@@ -58,6 +58,7 @@ class BaseModel:
         dictionary['updated_at'] = self.updated_at.isoformat()
 
         dictionary.pop("_sa_instance_state", None)
+        dictionary.pop("password", None)
         return dictionary
 
     def delete(self):
